@@ -5,5 +5,8 @@ class Purchase(models.Model):
     book = models.ForeignKey('book.Book', on_delete=models.CASCADE)
     date = models.DateField()
 
+    class Meta:
+        ordering = ['-date']
+
     def __str__(self):
         return f'{self.user} purchased {self.book}'
