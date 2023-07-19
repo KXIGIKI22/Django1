@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from .models import Purchase
 
-def purchases(request):
-    purchases = Purchase.objects.all().values()
-    return JsonResponse(list(purchases), safe=False)
+def purchase_list(request):
+    purchases = Purchase.objects.all().order_by('-date')
+    data = list(purchases.values())
+    return JsonResponse(data, safe=False)
