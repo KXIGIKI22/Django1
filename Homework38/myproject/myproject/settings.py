@@ -1,4 +1,4 @@
-from users.models import MyModel
+from users.models import User
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,8 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'book',
     'purchase',
-    'myproject'
-    'user'
+    'users'
 ]
 
 MIDDLEWARE = [
